@@ -1,0 +1,50 @@
+Flight Reservation API - Agile Methodology
+
+a. Create Project 
+
+71, 72: step 1: create Virtualenv 
+mkvirtualenv Flight_Reservation
+python3 -m pip install django or pip install -r /path/to/requirements.txt
+django-admin startproject FlightRes
+
+step 2: Create Git repo
+git: steps
+git init
+git add .
+git commit -m 'first commit'
+git remote add origin https://github.com/shivshankar31/FlightRes-API.git
+git push -u origin master
+
+step 3: create project, and app
+step 3.1: django-admin startproject FlightRes
+step 3.2: python3 manage.py startapp flightapp
+stpe 3.3: settings.py, add created app to INSTALLED_APPS
+step 3.4: add data base 
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'Flightdb',
+                'USER' : 'root',
+                'PASSWORD': 'Admin@123'
+            }
+        }
+
+Create Model
+
+71 to 74: step 4: create models
+step 4.1: in models.py, create flight Class
+step 4.2: in models.py create passenger Class
+step 4.3: in models.py, create reservation Class
+
+
+Create Nested Serializer
+
+75: step 5: create Serializer
+step 5.1: create Serializer.py File
+step 5.2: import created models and import Serializer on the File
+step 5.3: create 3 class for serializer and call the models and fields
+
+
+Create the Class Based View / endpoints
+
+Configure URL and Test
